@@ -6,22 +6,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage 
 {
-    WebDriver driver;
-    
-    //this is new comit from anurag
-    //in this page we r creating constructer
+	WebDriver driver;
+
+	//this is new comit from anurag
+	//in this page we r creating constructer
 	public  LoginPage(WebDriver ldriver) 
 	{
 		this.driver=ldriver;
-		
 	}
-	
+
 	@FindBy(name="email1") WebElement uname;
-	
+
 	@FindBy(name="pass") WebElement password;
-	
+
 	@FindBy(name="login") WebElement loginButton;
-	
+
 	public void loginToCRM(String usernameApplication,String passwordApplication)
 	{
 		try 
@@ -29,13 +28,11 @@ public class LoginPage
 			Thread.sleep(2000);
 		}catch(InterruptedException e)
 		{
-			
+
 		}
 		uname.sendKeys(usernameApplication);
 		password.sendKeys(passwordApplication);
 		loginButton.click();
-		
-		
 	}
 
 }
