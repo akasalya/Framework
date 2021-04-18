@@ -8,10 +8,12 @@ public class LoginPage
 {
     WebDriver driver;
     
+    //this is new comit from anurag
     //in this page we r creating constructer
 	public  LoginPage(WebDriver ldriver) 
 	{
 		this.driver=ldriver;
+		
 	}
 	
 	@FindBy(name="email1") WebElement uname;
